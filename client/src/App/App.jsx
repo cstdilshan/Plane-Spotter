@@ -28,20 +28,27 @@ class App extends React.Component {
     }
     render() {
         const { alert } = this.props;
+        let loggedUser = localStorage.getItem('user');
         return (
             <div>
             <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <a className="navbar-brand" href="#">Plane Spotter</a>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                    <a className="nav-link" href="/registerspotter">Regiter Plane</a>
-                    </li>
+                        {loggedUser ?
+                        <li className="nav-item active">
+                        <a className="nav-link" href="/registerspotter">Register Plane</a>
+                        </li> : ''
+                        }
+                    
                     
                     </ul>
+                    {loggedUser ?
                     <div className="form-inline my-2 my-lg-0">
                         <button className="btn btn-outline-success my-2 my-sm-0" onClick={this.handleLogoutUser()}>Logout</button>
-                    </div>
+                    </div> : ''
+                    }
+                    
                 </div>
             </nav>
             <div className="jumbotron">
