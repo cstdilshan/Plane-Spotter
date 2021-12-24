@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlaneSpotters.Core\PlaneSpotters.Core.csproj" />
+    <ProjectReference Include="..\PlaneSpotters.DataAccess\PlaneSpotters.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
