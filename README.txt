@@ -5,6 +5,6 @@ please change database connection string in appsettings.Development.json located
 
 Running React Application
 Run "npm install" to install the dependencies of the application
-Run "ng start" to run the application
+Run "npm start" to run the application
 
 
